@@ -1,15 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dZ64cv/8yiu9NIGdCW4d+DSb0qsxwdqN3xUM1lfsdcyQx8YPy5ID/an7UHIGpntKffzBd6lo6aQ+ovpD8H5ckg==",
+  "dgSpecHash": "2Q1l+yxAYjv2bSZVgF5qt43iv3/b4Q1clFBhxMjWVuFv6DEa/EliBHgovVDz7vQ2Owxzms3Nv4zJivx1h7ArXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Elad Cohen\\Desktop\\Seegnal\\Seegnal\\Seegnal\\Seegnal.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Elad Cohen\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-    "C:\\Users\\Elad Cohen\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Elad Cohen\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
-    "C:\\Users\\Elad Cohen\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
-    "C:\\Users\\Elad Cohen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
-    "C:\\Users\\Elad Cohen\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
