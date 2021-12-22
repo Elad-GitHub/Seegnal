@@ -39,12 +39,15 @@
 
             const cellElement1 = document.createElement("td");
             const cellElement2 = document.createElement("td");
+            const cellElement3 = document.createElement("td");
 
             cellElement1.textContent = row["term"];
             cellElement2.textContent = row["count"];
+            cellElement3.textContent = row["precentage"];
 
             rowElement.appendChild(cellElement1);
             rowElement.appendChild(cellElement2);
+            rowElement.appendChild(cellElement3);
 
             tableBody.appendChild(rowElement);
         }

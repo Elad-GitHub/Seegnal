@@ -10,7 +10,6 @@ namespace Seegnal.Models
         public string term { get; set; }
         //Number of reported cases which the ingredient has been found active 
         public int count { get; set; }
-        [JsonIgnore]
-        public int Precentage { get; set; }
+        public double precentage { get; set; }
     }
 }
