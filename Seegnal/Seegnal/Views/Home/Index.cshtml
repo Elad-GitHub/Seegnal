@@ -50,8 +50,7 @@
 
     function getItems() {
         fetch('drug/GetMainIngredients?reaction=death')
-            .then(response => response.json())
-            .then(data => _displayItems(data))
+            .then(response => console.log(response.json()))
             .catch(error => console.error('Unable to get items.', error));
     }
 
