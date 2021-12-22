@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seegnal", "Seegnal\Seegnal.csproj", "{A76A3F4C-0300-468F-AB55-0BC8D25AD717}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seegnal", "Seegnal\Seegnal.csproj", "{95740E40-9C41-40CD-91B5-77A6F184F5D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A76A3F4C-0300-468F-AB55-0BC8D25AD717}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A76A3F4C-0300-468F-AB55-0BC8D25AD717}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A76A3F4C-0300-468F-AB55-0BC8D25AD717}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A76A3F4C-0300-468F-AB55-0BC8D25AD717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95740E40-9C41-40CD-91B5-77A6F184F5D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95740E40-9C41-40CD-91B5-77A6F184F5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95740E40-9C41-40CD-91B5-77A6F184F5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95740E40-9C41-40CD-91B5-77A6F184F5D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5840C482-C223-4E5B-BCFA-AE6920534DBF}
+		SolutionGuid = {D1044EC4-67FB-4D54-B085-AF178C6A35D1}
 	EndGlobalSection
 EndGlobal
