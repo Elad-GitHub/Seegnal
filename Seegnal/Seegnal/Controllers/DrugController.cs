@@ -47,9 +47,16 @@ namespace Seegnal.Controllers
 
             var mostProminentIngredients = sortedIngredientList.Skip(Math.Max(0, sortedIngredientList.Count() - 10)).ToList();
 
+            CalculateRelativePrecentage(mostProminentIngredients);
+
+            return mostProminentIngredients;
+        }
+
+        private static void CalculateRelativePrecentage(List<IngredientData> mostProminentIngredients)
+        {
             double totalNumOfReaction = 0;
 
-            foreach(IngredientData ing in mostProminentIngredients)
+            foreach (IngredientData ing in mostProminentIngredients)
             {
                 totalNumOfReaction += ing.count;
             }
@@ -58,8 +65,6 @@ namespace Seegnal.Controllers
             {
                 ing.precentage = (double)(totalNumOfReaction / ing.count);
             }
-
-            return mostProminentIngredients;
         }
     }
 }
