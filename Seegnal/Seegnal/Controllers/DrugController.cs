@@ -23,17 +23,22 @@ namespace Seegnal.Controllers
         private async Task<List<IngredientData>> GetExternalResponse(string reaction)
         {
             var client = new HttpClient();
-            
+
             HttpResponseMessage response = await client.GetAsync($"https://api.fda.gov/drug/event.json?search=patient.reaction.reactionmeddrapt.exact:%22{reaction}%22&count=patient.drug.medicinalproduct.exact");
-            
+
             response.EnsureSuccessStatusCode();
-            
+
             var result = await response.Content.ReadAsStringAsync();
 
             DrugData drugsData = JsonSerializer.Deserialize<DrugData>(result);
 
-            //var ingredientList = drugsData.results.ToList();
+            List<IngredientData> mostProminentIngredients = GetMostProminentIngredients(drugsData);
 
+            return mostProminentIngredients;
+        }
+
+        private List<IngredientData> GetMostProminentIngredients(DrugData drugsData)
+        {
             var orderByQuery = from i in drugsData.results
                                orderby i.count
                                select i;
@@ -42,7 +47,9 @@ namespace Seegnal.Controllers
 
             Array.ForEach<IngredientData>(orderByQuery.ToArray<IngredientData>(), p => sortedIngredientList.Add(p));
 
-            return drugsData.results.ToList();
+            var mostProminentIngredients = sortedIngredientList.Skip(Math.Max(0, sortedIngredientList.Count() - 10)).ToList();
+            
+            return mostProminentIngredients;
         }
     }
 }
