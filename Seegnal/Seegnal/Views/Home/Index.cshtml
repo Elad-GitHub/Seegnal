@@ -4,5 +4,43 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <form action="javascript:void(0);" method="get" name="FormReaction" onsubmit="getItems()">
+        <label for="reaction">Search for reaction:</label>
+        <input type="text" id="reaction" name="reaction"><br><br>
+        <input type="submit" value="Search">
+    </form>
+
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tbody id="ingredients"></tbody>
+    </table>
 </div>
+
+<script type="text/javascript">
+
+    //document.forms["FormReaction"].addEventListener("submit", e => {
+    //    e.preventDefault();
+    //    const form = document.forms["FormReaction"];
+    //    const response = await fetch("api/{drug/GetMainIngredients?reaction=death/}").then((response) => {
+    //        return response.json();
+    //    })
+    //        .catch(function () {
+    //            // handle the error
+    //        });
+    //    });
+    //});
+
+    function getItems() {
+        fetch('drug/GetMainIngredients?reaction=death')
+            .then(response => response.json())
+            .then(data => _displayItems(data))
+            .catch(error => console.error('Unable to get items.', error));
+    }
+
+</script>

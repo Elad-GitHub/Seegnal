@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Seegnal.Models;
+﻿using Seegnal.Models;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
