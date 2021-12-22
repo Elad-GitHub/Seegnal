@@ -46,7 +46,19 @@ namespace Seegnal.Controllers
             Array.ForEach<IngredientData>(orderByQuery.ToArray<IngredientData>(), p => sortedIngredientList.Add(p));
 
             var mostProminentIngredients = sortedIngredientList.Skip(Math.Max(0, sortedIngredientList.Count() - 10)).ToList();
-            
+
+            var totalNumOfReaction = 0;
+
+            foreach(IngredientData ing in mostProminentIngredients)
+            {
+                totalNumOfReaction += ing.count;
+            }
+
+            foreach (IngredientData ing in mostProminentIngredients)
+            {
+                ing.Precentage = totalNumOfReaction / ing.count;
+            }
+
             return mostProminentIngredients;
         }
     }
