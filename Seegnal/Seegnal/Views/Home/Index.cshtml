@@ -13,7 +13,31 @@
 
     <table>
         <tr>
+            <th>Name of ingredient</th>
+            <th>Count of the specified reaction</th>
+            <th>The relative percentage among the fetched results.</th>
+        </tr>
+        <tr>
             <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
             <th></th>
             <th></th>
             <th></th>
@@ -24,18 +48,6 @@
 
 <script type="text/javascript">
 
-    //document.forms["FormReaction"].addEventListener("submit", e => {
-    //    e.preventDefault();
-    //    const form = document.forms["FormReaction"];
-    //    const response = await fetch("api/{drug/GetMainIngredients?reaction=death/}").then((response) => {
-    //        return response.json();
-    //    })
-    //        .catch(function () {
-    //            // handle the error
-    //        });
-    //    });
-    //});
-
     function getItems() {
         fetch('drug/GetMainIngredients?reaction=death')
             .then(response => response.json())
@@ -44,3 +56,39 @@
     }
 
 </script>
+
+<style>
+    table {
+        text-align: left;
+        position: relative;
+        border-collapse: collapse;
+        background-color: #f6f6f6;
+    }
+    /* Spacing */
+    td, th {
+        border: 1px solid #999;
+        padding: 20px;
+    }
+
+    th {
+        background: brown;
+        color: white;
+        border-radius: 0;
+        position: sticky;
+        top: 0;
+        padding: 10px;
+    }
+
+    .primary {
+        background-color: #000000
+    }
+
+    tfoot > tr {
+        background: black;
+        color: white;
+    }
+
+    tbody > tr:hover {
+        background-color: #ffc107;
+    }
+</style>
