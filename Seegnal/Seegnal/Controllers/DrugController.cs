@@ -15,10 +15,14 @@ namespace Seegnal.Controllers
         {
             var result = await GetExternalResponse(reaction);
 
-            return result;
+            DrugData drugsData = JsonSerializer.Deserialize<DrugData>(result);
+
+            List<IngredientData> mostProminentIngredients = GetMostProminentIngredients(drugsData);
+
+            return mostProminentIngredients;
         }
 
-        private async Task<List<IngredientData>> GetExternalResponse(string reaction)
+        private async Task<string> GetExternalResponse(string reaction)
         {
             var client = new HttpClient();
 
@@ -26,13 +30,7 @@ namespace Seegnal.Controllers
 
             response.EnsureSuccessStatusCode();
 
-            var result = await response.Content.ReadAsStringAsync();
-
-            DrugData drugsData = JsonSerializer.Deserialize<DrugData>(result);
-
-            List<IngredientData> mostProminentIngredients = GetMostProminentIngredients(drugsData);
-
-            return mostProminentIngredients;
+            return await response.Content.ReadAsStringAsync();
         }
 
         private List<IngredientData> GetMostProminentIngredients(DrugData drugsData)
@@ -46,8 +44,6 @@ namespace Seegnal.Controllers
             Array.ForEach<IngredientData>(orderByQuery.ToArray<IngredientData>(), p => sortedIngredientList.Add(p));
 
             var mostProminentIngredients = sortedIngredientList.Skip(Math.Max(0, sortedIngredientList.Count() - 10)).ToList();
-
-            CalculateRelativePrecentage(mostProminentIngredients);
 
             return mostProminentIngredients;
         }

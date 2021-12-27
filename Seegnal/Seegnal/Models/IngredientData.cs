@@ -6,7 +6,7 @@
         public string term { get; set; }
         //Number of reported cases which the ingredient has been found active 
         public int count { get; set; }
-        //The relative percentage among the fetched results
+        //The relative percentage among the fetched results - other ingredient
         public double precentage { get; set; }
     }
 }
