@@ -9,19 +9,19 @@
         <br>
         <br>
         <input type="submit" value="Search">
+        <br>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name of Ingredient</th>
+                    <th>Count</th>
+                    <th>Prcentage</th>
+                </tr>
+            </thead>
+            <tbody id="ingredients"></tbody>
+        </table>
     </form>
-    <br>
-    <br>
-    <table>
-        <thead>
-            <tr>
-                <th>Name of Ingredient</th>
-                <th>Count</th>
-                <th>Prcentage</th>
-            </tr>
-        </thead>
-        <tbody id="ingredients"></tbody>
-    </table>
 </div>
 
 <script type="text/javascript">
@@ -60,6 +60,8 @@
     td {
         border: 1px solid black;
         border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     th,

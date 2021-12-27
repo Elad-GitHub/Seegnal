@@ -63,7 +63,7 @@ namespace Seegnal.Controllers
 
             foreach (IngredientData ing in mostProminentIngredients)
             {
-                ing.precentage = (double)(totalNumOfReaction / ing.count);
+                ing.precentage = (double)(ing.count / (totalNumOfReaction * 100));
             }
         }
     }
