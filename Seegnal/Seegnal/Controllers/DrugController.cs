@@ -50,7 +50,7 @@ namespace Seegnal.Controllers
             return mostProminentIngredients;
         }
 
-        private static void CalculateRelativePrecentage(List<IngredientData> mostProminentIngredients)
+        private void CalculateRelativePrecentage(List<IngredientData> mostProminentIngredients)
         {
             double totalNumOfReaction = 0;
 
