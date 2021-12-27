@@ -19,6 +19,8 @@ namespace Seegnal.Controllers
 
             List<IngredientData> mostProminentIngredients = GetMostProminentIngredients(drugsData);
 
+            CalculateRelativePrecentage(mostProminentIngredients);
+
             return mostProminentIngredients;
         }
 
